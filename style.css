@@ -1,0 +1,264 @@
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+body{
+  font-family: montserrat;
+}
+
+/*=== NAV ===*/
+nav{
+  background: #0e1111;
+  height: 80px;
+  width: 100%;
+}
+label.logo{
+  color: #ff5722;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+  font-family: 'Oswald', sans-serif;
+}
+nav ul{
+  float: right;
+  margin-right: 20px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #f3f3f3;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+a.active,a:hover{
+  background: #414a4c;
+  transition: .5s;
+}
+.checkbtn{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+
+/*=== Section ===*/
+section{
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('bg-section.jpg');
+  background-size: cover;
+  height: calc(100vh - 80px);
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  min-height: 400px;
+  align-items: center;
+}
+
+section p {
+  font-size: 60px;
+  color: #fddb3a;
+  font-family: 'Amatic SC', cursive;
+}
+
+/*=== INFORMATION ===*/
+
+#info {
+  background-color: #0e1111;
+  height: 100vh;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  min-height: 400px;
+
+}
+
+#info h1 {
+  margin-bottom: 50px;
+  text-align: center;
+  color: #ffd460;
+  font-weight: bold;
+  font-size: 72px;
+  font-family: 'Bungee', cursive;
+}
+
+#info h2 {
+  margin-top: 25px;
+  text-align: center;
+  color: #00a1ab;
+  font-family: 'Bungee', cursive;
+  background-color: #0e1111;
+
+}
+
+#info p {
+  margin: 0 0 10px 100px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 18px;
+  color: #faf3dd;
+}
+
+/*=== Form ===*/
+#form {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%;
+}
+
+#form iframe {
+  height: 1135px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/*=== Contact Us ===*/
+#contact-wrapper {
+  background: url(bg-section.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  height: 100vh;
+  width: 100%;
+}
+
+#contact-wrapper h1 {
+  color: #ffd460;
+  font-weight: bold;
+  font-size: 72px;
+  font-family: 'Bungee', cursive;
+  padding-top: 100px;
+  text-align: center;
+}
+
+#contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 400px;
+  margin: 0;
+  text-align: center;
+}
+
+#contact-wrapper p {
+  color: #ffd460;
+  font-size: 20px;
+  font-family: 'Oswald', sans-serif;
+  margin-bottom: 10px;
+}
+
+/*=== Footer ===*/
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #0e1111;
+  color: #f3f3f3;
+  font-family: 'Oswald', sans-serif;
+}
+
+
+/*=== MEDIA QUERIES ===*/
+
+@media (max-width: 1024px){
+  #info h2 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 952px){
+  label.logo{
+    font-size: 30px;
+    text-align: center;
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+  #info p {
+    margin-left: 50px;
+  }
+}
+
+@media (max-width: 858px){
+  .checkbtn{
+    display: none;
+  }
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #0e1111;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover,a.active{
+    background: none;
+    color: #2a9d8f;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+  #info p {
+    text-align: center;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  #info h1, #contact-wrapper h1 {
+    font-size: 50px;
+  }
+  #info p {
+    text-align: left;
+    margin: 0 20px;
+  }
+  #info h2 {
+    margin: 15px;
+  }
+  #form {
+    padding-top: 80%;
+  }
+
+}
+
+@media (max-width: 400px) {
+  #info h1 {
+    font-size: 40px;
+  }
+  #form {
+    padding-top: 140%;
+  }
+}

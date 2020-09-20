@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>The Goenkan Checkmate</title>
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel = "icon" href ="logo.png"  type = "image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Bungee&family=Oswald&family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("Aug 29, 2021 09:00:00").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Output the result in an element with id="demo"
+            document.getElementById("demo").innerHTML = days + " : " + hours + " : " + minutes + " : " + seconds;
+
+            // If the count down is over, write some text
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "STARTED";
+            }
+        }, 1000);
+    </script>
+    <link rel = "icon" href ="Logo.png"  type = "image/x-icon">
+  </head>
+  <body>
+
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo">CHECKMATE</label>
+      <ul>
+        <li><a class="active" href="#">Home</a></li>
+        <li><a href="index.html#info">Information</a></li>
+        <li><a href="index.html#form">Register</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section>
+      <p>Do you have what it takes to be the Goenkan Grandmaster?</p>
+      <p id="demo"></p>
+    </section>
+
+    <div id="info">
+      <h1>INFORMATION</h1>
+      <p>DATE : 29<sup>TH</sup> AUGUST, 2020.</p>
+      <p>TIME : 9:00 AM ONWARDS.</p>
+      <p>LAST DATE OF REGISTRATION: 27<sup>TH</sup> AUGUST, 2020.</p>
+      <p>2 ROUNDS WILL BE CONDUCTED : QUALIFIERS ROUND AND FINALS ROUND.</p>
+      <h2>TIP: MOVE IN SILENCE AND ONLY SPEAK WHEN IT'S TIME TO SAY CHECKMATE!</h2>
+    </div>
+
+    <div id="form" style="--aspect-ratio: 16/9;">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeSjzPU02uiNJAY3oHkethxkUsmRyHNQ1vRlnRzX3gGueOcmw/viewform?embedded=true" width="1600" height="900" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+    </div>
+
+    <div id="contact-wrapper">
+      <h1>Contact Us</h1>
+      <div id="contact">
+        <p id="question">Have any questions? The Communication In-Charges would clear it out for you.</p>
+        <p>Yasmin - +91 75869 83732</p>
+        <p>Prerna&nbsp;  - +91 85091 90719</p>
+        <p>Anirudh - +91 82504 90199</p>
+        <p>Muskan - +91 62943 26960</p>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2020 G. D. Goenka Public School, Siliguri</p>
+    </footer>
+
+  </body>
+</html>
