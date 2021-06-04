@@ -1,2 +1,2 @@
 # Checkmate
-This is the source code of goenkancheckmate.gq
+Website for registerations of chess competition
